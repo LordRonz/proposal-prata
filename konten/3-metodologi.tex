@@ -2,27 +2,48 @@
 
 % Ubah konten-konten berikut sesuai dengan isi dari metodologi
 
-\subsection{Desain Roket yang Digunakan}
+\subsection{Tools Aplikasi Yang Digunakan}
 
-\lipsum[11]
+Sistem ini dibuat pada \emph{operating system} Linux. Untuk dapat
+berjalan, sistem ini membutuhkan:
 
-% Contoh input gambar dengan format *.jpg
+\subsubsection{Golang}
+Menggunakan golang sebagai bahasa pemrograman untuk web server. Untuk servernya akan menggunakan library Echo. Library Geth
+digunakan untuk keperluan mengakses API ethereum pada Golang, Kubo digunakan untuk menghubungkan golang dengan IPFS.
+
+\subsubsection{Docker}
+Aplikasi yang bersifat open source yang berfungsi se-
+bagai wadah/container untuk mengepak/memasukkan sebuah
+software secara lengkap.
+
+\subsubsection{InterPlanetary File System (IPFS )}
+Protokol dan peer to
+peer network untuk distribusi konten yang cepat, terdistribusi
+dan mudah disatukan yang kompatibel untuk semua tipe data
+seperti gambar, stream video, database terdistribusi.
+
+\subsection{Metodologi Penelitian}
+
 \begin{figure} [ht] \centering
   % Nama dari file gambar yang diinputkan
-  \includegraphics[scale=0.45]{gambar/blueprint.jpg}
+  \includegraphics[scale=0.55]{gambar/diagram_blok_metodologi.png}
   % Keterangan gambar yang diinputkan
-  \caption{\emph{Blueprint} roket yang akan diuji coba \citep{SpaceXBlueprint}}
+  \caption{Diagram Blok Metodologi}
   % Label referensi dari gambar yang diinputkan
   \label{fig:Blueprint}
 \end{figure}
 
-% Contoh penggunaan referensi dari gambar yang diinputkan
-Pada \emph{blueprint} yang tertera di Gambar \ref{fig:Blueprint}. \lipsum[12]
+\subsubsection{Perancangan Arsitektur}
+Proses perancangan dari arsiktektur sistem yang meliputi IPFS, server, dan blockchain.
 
-\subsection{Perhitungan Energi Roket}
+\subsubsection{Persiapan Ekosistem}
+Proses penyiapan program-program yang dibutuhkan untuk proses pengembangan sistem.
 
-\lipsum[13]
+\subsubsection{Pembuatan sistem}
+Proses pembuatan sistem yang meliputi pembuatan platform blockchain, server serta file system
 
-\subsection{Mekanisme Pengujian}
+\subsubsection{Testing dan Integrasi}'
+Proses melakukan testing \emph{trial and error} untuk pengujian kestabilan sistem serta perbaikan dari sisi performa dan \emph{bug fixing}
 
-\lipsum[14]
+\subsubsection{Hasil}
+Apabila sistem sudah berjalan dan terintegrasi dengan lancar maka proses selanjutnya adalah pelaporan dalam pembukuan tugas akhir.
