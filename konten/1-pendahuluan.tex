@@ -1,88 +1,61 @@
-\section{PENDAHULUAN}
+\chapter{PENDAHULUAN}
 
-\subsection{Latar Belakang}
+\section{Latar Belakang}
 
 % Ubah paragraf-paragraf berikut sesuai dengan latar belakang dari tugas akhir
-Musik adalah salah satu ruang terbesar di Industri Hiburan. Selama bertahun-tahun, ada banyak unduhan yang dilakukan di industri musik dalam beragam format digital
-dan ekstensi (misalnya mp4, mp3, dll.). Namun, sebagian besar unduhan yang disebutkan di atas diperoleh secara ilegal namun diindeks
-atau dicatat dalam perpustakaan digital unduhan global. Karena aspek unduhan ilegal, pembuat konten kehilangan banyak pendapatan
-dan menimbulkan biaya yang mengarah pada masalah hak cipta.
+Munculnya teknologi \emph{virtual reality (VR)} dan pengembangan platform metaverse telah mengarah pada terciptanya
+pengalaman online yang imersif di mana pengguna dapat berinteraksi satu sama lain dan terlibat dalam berbagai aktivitas, apalagi setelah  Mark Zuckerberg
+membeli oculus \parencite{luckerson2014facebook}. 
+Salah satu aktivitas tersebut adalah memainkan alat musik sebagai karakter virtual, yang dapat dicapai melalui penggunaan 
+teknologi motion capture dan simulasi instrumen virtual.
 
-Sejak diperkenalkan pada tahun 2008, teknologi blockchain telah dipuji sebagai salah satu yang bisa
-merevolusi banyak industri yang berbeda. Industri musik mengalami beberapa perubahan dalam 20 tahun terakhir sebagai konsekuensi dari fenomena seperti pembajakan musik, musik digital dan streaming musik. Banyak
-menganggap teknologi blockchain sebagai solusi untuk banyak masalah yang dihadapi industri musik.
-Namun, sementara teknologi telah ada selama lebih dari 10 tahun, dan terlepas dari antusiasme
-sarjana dan ahli, sedikit yang telah dilakukan untuk benar-benar menerapkan blockchain di industri,
-terutama oleh pemain terbesarnya. Pertanyaan yang dihasilkan adalah bagaimana teknologi dapat mengubah
-industri musik.
+Namun, sistem saat ini untuk berbagi dan mengakses data musik di metaverse bersifat terpusat dan sering mengandalkan teknologi 
+hak cipta, yang dapat membatasi fleksibilitas dan interoperabilitas pengalaman musik. Pendekatan yang terdesentralisasi dan terbuka 
+untuk berbagi data dapat memungkinkan ekosistem musik yang lebih beragam dan interaktif di dalam \emph{metaverse}.
 
-Diperlukan sebuah sistem yang bisa berbagi record data dengan integritas yang tinggi. Kebanyakan sistem yang ada
-menggunakan sistem terpusat yang masih mempunyai kelemahan
-dalam integritas sebuah data. Maka dari itu, kami memberikan
-solusi dengan menggunakan sistem blockchain. Blockchain mampu
-menyediakan integritas yang tinggi dengan sistemnya yang bersifat
-desentralisasi, dapat diakses secara global oleh siapa saja. 
-Di metaverse, NFT merupakan konsep penting dalam ekosistem metaverse, 
-yang memungkinkan orang untuk memiliki benda virtual dalam bentuk seperti mobil, kapal, atau bahkan aksesori dan lukisan maupun musik, semuanya dimungkinkan melalui NFT. 
-Non Fungible Token (NFT) adalah aset kriptografi pada blockchain dengan kode identifikasi unik dan memiliki metadata yang membedakannya satu sama lain.
+Salah satu fitur dari Unreal Engine 5 yaitu Metasound yang dapat melakukan pengolahan audio dengan mudah bagi para pengembang. Unreal Engine 5 juga
+memiliki fitur yakni API blockchain sehingga dapat mengeksekusi \emph{smart contract}. Fitur ini dinamakan Web3.UE. Web3.Unreal adalah plugin 
+\emph{open source} yang dibuat untuk pengembang game dan komunitas untuk membantu mereka yang bekerja dengan Unreal Engine untuk mengintegrasikan 
+fungsionalitas blockchain ke dalam game mereka. Kedua hal ini dapat dikombinasikan dan digunakan untuk
+pengembangan metaverse.
 
-\subsection{Rumusan Masalah}
+Metaverse telah digambarkan sebagai iterasi baru dari internet yang menggunakan headset VR, teknologi blockchain, 
+dan avatar dalam integrasi baru dunia fisik dan virtual. \parencite{DWIVEDI2022102542}. Dalam proposal penelitian ini, saya mengusulkan 
+untuk merancang dan mengimplementasikan sistem berbagi data berbasis \emph{blockchain} 
+untuk \emph{musical player} di metaverse dengan NFT. Sistem ini akan menggunakan smart contract dan solusi penyimpanan terdesentralisasi 
+untuk memungkinkan pengguna berbagi dan mengakses data musik dari metaverse dengan cara yang aman dan transparan.
+
+\section{Rumusan Masalah}
 
 % Ubah paragraf berikut sesuai dengan rumusan masalah dari tugas akhir
-Berdasarkan dari latar belakang diatas , maka adapun permasalahan yang dapat diambil adalah diperlukan sistem blockchain yang dapat digunakan sebagai basis dari NFT untuk melakukan data sharing untuk music player pada metaverse. 
+Di dunia \emph{virtual metaverse}, kebutuhan akan sistem yang aman dan efisien untuk berbagi data terkait musik semakin meningkat. 
+Saat ini, data ini sering disimpan dalam database terpusat yang rentan terhadap pelanggaran keamanan dan 
+penyensoran, dan dapat menyulitkan pengguna untuk mengakses dan mengontrol data mereka sendiri. Dibutuhkan juga sistem blockchain dengan interoperabilitas sehingga
+pengembang metaverse dapat mengembangkan sistem yang dapat berkomunikasi dengan blockchain yang lainnya.
 
-\subsection{Penelitian Terkait}
+\section{Batasan Masalah}
 
-% Ubah paragraf berikut sesuai dengan penelitian lain yang terkait dengan tugas akhir
-\subsubsection{Pengembangan Sistem Keamanan Berbagi Data PACS Berbasis Blockchain}
-Penulis pada \citep{DitoPrabowo2020} membuat sebuah sistem berbagi record data PACS pasien dalam penelitian ini
-telah berhasil dalam mengintegrasikan record data pasien antar ru-
-mah sakit juga tambahan keamanan dengan pemberian akses untuk
-berbagi, rumah sakit yang mendapat akses token dan secret key da-
-pat membaca maupun menulis data pasien sesuai akses token yang
-diberikan pasien. Bagi yang tidak mendapatkan akses tidak akan
-bisa membaca maupun menulis data pasien, dengan ini keamanan
-dan privasi pasien terjaga penuh. Kendali atas datanya tetap pa-
-sien yang menentukan. Kejadian data breach juga sulit dilakukan
-pada sistem aplikasi yang bersifat desentralisasi dan menggunakan
-platform blockchain apalagi data juga dienkripsi.
-Terkait dengan scalability, sistem mampu menangani berba-
-gai size file yang beragam mulai dari 1Mb sampai dengan 64 Mb,
-dan dari dilakukannya beberapa pengujian didapatkan hasil ekseku-
-si waktu yang mendekati sama, dari ini bisa diketahui bahwa IPFS
-stabil, juga bisa lebih cepat apabila file sudah pernah unggah sebe-
-lumnya (hash file sama).
-Pada fitur aplikasi, semakin banyak data yang di buat block
-akan semakin banyak waktu yang diperlukan untuk mining. Ter-
-bukti pada feature panambahan data pasien didapatkan rata-rata
-waktu mining 0,51 detik, lebih lama dari feature yang lain.
+% Ubah paragraf berikut sesuai dengan rumusan masalah dari tugas akhir
+Untuk memfokuskan permasalahan yang diangkat maka dilakukan pembatasan ma-
+salah. Batasan - batasan masalah tersebut diantaranya:
+\begin{enumerate}
+  \item Jenis \emph{Blockchain} yang digunakan adalah Ethereum.
+  \item Target pengguna adalah pengguna metaverse.
+  \item Target platform musik adalah Metasounds di Unreal Engine 5.
+  \item Data berisi JSON yang adalah metadata yang diperuntukkan untuk metasound.
+  \item File audio disimpan di IPFS
+\end{enumerate}
 
-\subsubsection{Securing music sharing platforms: A Blockchain-Based Approach}
-Penulis pada paper \citep{adjei2021securing} mengajukan sebuah platform berbagi musik yang berbasis pada blockchain dan arsitektur IPFS. 
-Proposisi dari penulis adalah menghilangkan dan meminimalkan pembagian musik ilegal dari pembuat konten di seluruh
-internet menggunakan teknologi blockchain yang juga memfasilitasi pemeriksaan duplikat metadata di
-Internet. Jaringan berbagi file ini dibangun berdasarkan blockchain Ethereum yang menggunakan
-cara mekanisme konsensus untuk mencapai tujuan yang dinyatakan dari \emph{smart contract} dengan cara yang cepat dan aman.
-Simulasi penulis menyajikan berbagai langkah yang diperlukan untuk memvisualisasikan pengoperasian sistem yang diusulkan. Penulis memperkenalkan fitur pendaftaran dan kontrol akses yang ditambahkan ke protokol IPFS untuk memastikan bahwa
-file musik memiliki hak cipta. \emph{Smart contract} memastikan bahwa persyaratan yang harus dipenuhi sebelumnya
-mengakses file musik diberlakukan. Keadaan jaringan yang tahan-rusak ditunjukkan sedemikian rupa sehingga
-setiap node yang berpartisipasi memastikan bahwa catatan yang disimpan pada file musik yang diunduh sesuai dengan yang diharapkan
-pendapatan. Akuntabilitas pendapatan yang efektif dicapai dengan sistem yang diusulkan.
-
-\subsubsection{A Study on Blockchain-based Music Distribution Framework: Focusing on Copyright Protection}
-
-Penulis pada paper \citep{kim2020study} mendesain dan mengimplementasikan sebuah blockchain based music copyright distribution model.
-Model yang diajukan mengatur aset-aset musik menjadi \emph{blocks} dan mendistribusikannya kepada node-node yang berpartisipasi dalam blockchain.
-Jika kita ingin mendistribusikan musik, kita dapat mengakses platformnya dimanapun dan kapanpun dengan perangkat komputer maupun smartphone untuk mengakses dan
-mendaftarkan musik. Di masa depan, apabila hukum dan sistemnya teratur kembali, beragam konten yang disimpan didalam blockchain dapat mengelola copyrightnya.
-
-\subsubsection{A Secure Data Sharing Platform Using Blockchain and Interplanetary File System}
-Pada paper ini \citep{naz2019secure}, sebuah framework data sharing yang aman berbasis blockchain dipersembahkan. Tujuan utama dari pengajuan skenario ini adalah untuk 
-memberikan keautentikan dan kualitas data kepada customer. Sebuah penyimpanan terdesentralisasi IPFS memberikan solusi untuk masalah pada sisi pemilik.
-Data hash yang diterima oleh IPFS dienkripsi dengan SSS, jadi seorang customer yang belum mendepositkan harga konten digital, tidak dapat mengakses datanya.
-
-\subsection{Tujuan Penelitian}
+\section{Tujuan Penelitian}
 
 % Ubah paragraf berikut sesuai dengan tujuan penelitian dari tugas akhir
 Penelitian ini memiliki tujuan untuk membuat sistem yang
-dapat melakukan sharing data untuk musical player yang ada di Metaverse menggunakan platfrom blockchain, agar pengguna metaverse dapat menggunakan platform music dan diintegrasikan dengan sistem rekomendasi musik.
+dapat melakukan sharing data untuk musical player yang ada
+di Metaverse menggunakan platfrom blockchain, agar 
+pengguna metaverse dapat menggunakan platform music
+dan diintegrasikan dengan metasound.
+
+\section{Manfaat}
+Manfaat yang bisa didapat dari hasil tugas akhir ini adalah
+memajukan pengembangan metaverse pada bidang audio dan sistem berbagi data blockchain
+terkhususnya bagi para pengembang Web3.

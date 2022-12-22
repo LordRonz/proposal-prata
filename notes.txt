@@ -1,0 +1,4 @@
+marp -> generate ppt with markdown
+mermaid -> js diagramming tool
+
+web3storage IPFS
