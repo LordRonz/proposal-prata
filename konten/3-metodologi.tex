@@ -17,7 +17,7 @@ akan sangat membantu dalam proses pengembangan. Terdapat banyak fitur-fitur sepe
 Remix IDE merupakan IDE yang memudahkan kita untuk proses development, deployment, dan membuat smart contract di Ethereum.
 
 \subsection{Ethereum}
-Ethereum adalah \emph{blockchain opensource} dengan fitur smart contract. Fitur smart contract inilah yang akan digunakan untuk 
+Ethereum adalah \emph{blockchain opensource} dengan fitur smart contract. Fitur smart contract inilah yang akan digunakan untuk
 melakukan sharing data metadata audio.
 
 \subsection{Solidity}
@@ -33,13 +33,13 @@ dan mudah disatukan yang kompatibel untuk semua tipe data
 seperti gambar, stream video, database terdistribusi.
 
 \subsection{\emph{web3.storage}}
-web3.storage adalah serangkaian API dan layanan yang memudahkan pengembang dan pengguna lain untuk berinteraksi 
-dengan data dengan cara yang tidak terikat dengan tempat penyimpanan data sebenarnya secara fisik. Service ini menggunakan data terdesentralisasi dan protokol 
+web3.storage adalah serangkaian API dan layanan yang memudahkan pengembang dan pengguna lain untuk berinteraksi
+dengan data dengan cara yang tidak terikat dengan tempat penyimpanan data sebenarnya secara fisik. Service ini menggunakan data terdesentralisasi dan protokol
 seperti IPFS, Filecoin, dan UCAN yang memungkinkan arsitektur aplikasi dan alur kerja yang dapat diverifikasi, berpusat pada data dan pengguna.
 
 \section{Desain Arsitektur}
-Proses ini memberikan perincian pada sistem yang akan dibuat. Berdasarkan dari latar 
-belakang masalah dan tujuan dari tugas akhir ini, didapatkan beberapa fungsi yang akan 
+Proses ini memberikan perincian pada sistem yang akan dibuat. Berdasarkan dari latar
+belakang masalah dan tujuan dari tugas akhir ini, didapatkan beberapa fungsi yang akan
 diimplementasikan pada sistem dan keseluruhan flow sistem.
 
 \subsection{Arsitektur Sistem}
@@ -70,8 +70,8 @@ Proses perancangan dari arsiktektur sistem yang meliputi IPFS, server, dan block
 
 \subsection{Proses \emph{generate} NFT dari audio}
 
-Untuk melakukan generate NFT diperlukan proses yang dinamakan Token minting. 
-Crypto minting adalah sebuah proses komputasi untuk memvalidasi informasi, membuat blok baru dan merekam informasi tersebut ke dalam blockchain. 
+Untuk melakukan generate NFT diperlukan proses yang dinamakan Token minting.
+Crypto minting adalah sebuah proses komputasi untuk memvalidasi informasi, membuat blok baru dan merekam informasi tersebut ke dalam blockchain.
 Dalam proses crypto minting biasanya membutuhkan algoritma konsensus Proof-of-Stake.
 
 \begin{figure} [ht] \centering
@@ -87,14 +87,14 @@ Proof-of-Stake sendiri adalah konsensus yang membantu proses minting seperti bag
 Minting adalah proses yang cukup mudah dan terdesentralisasi. Kemudahan dalam proses  minting ini memungkinkan siapa saja untuk membuat token baru tanpa mengharuskan otoritas pusat untuk melakukannya.
 Selain itu, ekosistem crypto juga menyediakan berbagai macam token yang diciptakan dengan proses minting, termasuk token aset kripto dan non-fungible token (NFT). Kedua jenis token tersebut tentunya dapat dibuat di berbagai ekosistem blockchain.
 
-\emph{Listing} diatas merupakan \emph{interface} dari metadata yang ditampung di NFT. Semua nilai dari data JSON tersebut 
+\emph{Listing} diatas merupakan \emph{interface} dari metadata yang ditampung di NFT. Semua nilai dari data JSON tersebut
 memiliki tipe data yang adalah \emph{string}
 
 \section{Implementasi}
 
-Pembuatan implementasi dari fitur dari aplikasi yang sudah ditentukan melalui tahap 
-sebelumnya. Tahap ini dilakukan sampai selesai untuk masuk pada tahap validasi. Alokasi 
-waktu yang ditentukan menyesuaikan dengan pembuatan fitur yang dikerjakan. Pembuatan 
+Pembuatan implementasi dari fitur dari aplikasi yang sudah ditentukan melalui tahap
+sebelumnya. Tahap ini dilakukan sampai selesai untuk masuk pada tahap validasi. Alokasi
+waktu yang ditentukan menyesuaikan dengan pembuatan fitur yang dikerjakan. Pembuatan
 implementasi diperkirakan kurang lebih 1 bulan. Implementasi ini termasuk baik pembuatan mini-metaverse
 menggunakan \emph{Unreal Engine 5} sebagai sarana untuk melakukan evaluasi dan testing agar keseluruhan sistem dapat terintegrasi.
 
@@ -120,39 +120,38 @@ ini.
   \begin{tabular}{|p{3.5cm}|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 
     \hline
-    \multirow{2}{*}{Kegiatan} & \multicolumn{16}{|c|}{Minggu} \\
-    \cline{2-17} &
-    1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
+    \multirow{2}{*}{Kegiatan} & \multicolumn{16}{|c|}{Minggu}                                                                       \\
+    \cline{2-17}              &
+    1                         & 2                             & 3  & 4  & 5  & 6  & 7  & 8  & 9  & 10 & 11 & 12 & 13 & 14 & 15 & 16 \\
     \hline
 
     % Gunakan \G untuk mengisi sel dan \w untuk mengosongkan sel
-    Requirement Analysis &
-    \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    Requirement Analysis      &
+    \G                        & \G                            & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Desain Sistem &
-    \w & \w & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    Desain Sistem             &
+    \w                        & \w                            & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Implementasi &
-    \w & \w & \w & \G & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w \\
+    Implementasi              &
+    \w                        & \w                            & \w & \G & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Integration Testing &
-    \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w \\
+    Integration Testing       &
+    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w \\
     \hline
 
-    Unit Testing &
-    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w \\
+    Unit Testing              &
+    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w \\
     \hline
 
-    Evaluasi penelitian &
-    \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \G \\
+    Evaluasi penelitian       &
+    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \G \\
     \hline
 
-    Penyusunan buku &
-    \w & \w & \w & \w & \w & \w & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G \\
+    Penyusunan buku           &
+    \w                        & \w                            & \w & \w & \w & \w & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G \\
     \hline
-
   \end{tabular}
 \end{table}

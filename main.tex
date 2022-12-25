@@ -123,69 +123,69 @@
 
 % Isi keseluruhan dokumen
 \begin{document}
-  % Nomor halaman pembuka dimulai dari sini
-  \pagenumbering{roman}
+% Nomor halaman pembuka dimulai dari sini
+\pagenumbering{roman}
 
-  % Atur ulang penomoran halaman
-  \setcounter{page}{1}
+% Atur ulang penomoran halaman
+\setcounter{page}{1}
 
-  % Sampul Bahasa Indonesia
-  \newcommand\covercontents{sampul/konten-id.tex}
-  \input{sampul/sampul-luar.tex}
+% Sampul Bahasa Indonesia
+\newcommand\covercontents{sampul/konten-id.tex}
+\input{sampul/sampul-luar.tex}
 
-  % Lembar pengesahan
-  \input{lainnya/lembar-pengesahan.tex}
+% Lembar pengesahan
+\input{lainnya/lembar-pengesahan.tex}
+\newpage
+
+% Abstrak
+\input{lainnya/abstrak.tex}
+\newpage
+
+\input{lainnya/abstrak-en.tex}
+\newpage
+
+\begin{spacing}{1.5}
+  % Daftar isi
+  \renewcommand*\contentsname{DAFTAR ISI}
+  \addcontentsline{toc}{chapter}{\contentsname}
+  \tableofcontents
   \newpage
 
-  % Abstrak
-  \input{lainnya/abstrak.tex}
+  % Daftar gambar
+  \renewcommand*\listfigurename{DAFTAR GAMBAR}
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
   \newpage
 
-  \input{lainnya/abstrak-en.tex}
+  % Daftar tabel
+  \renewcommand*\listtablename{DAFTAR TABEL}
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
   \newpage
+\end{spacing}
 
-  \begin{spacing}{1.5}
-    % Daftar isi
-    \renewcommand*\contentsname{DAFTAR ISI}
-    \addcontentsline{toc}{chapter}{\contentsname}
-    \tableofcontents
-    \newpage
+% Nomor halaman isi dimulai dari sini
+\pagenumbering{arabic}
 
-    % Daftar gambar
-    \renewcommand*\listfigurename{DAFTAR GAMBAR}
-    \addcontentsline{toc}{chapter}{\listfigurename}
-    \listoffigures
-    \newpage
+% Konten pendahuluan
+\input{konten/1-pendahuluan.tex}
 
-    % Daftar tabel
-    \renewcommand*\listtablename{DAFTAR TABEL}
-    \addcontentsline{toc}{chapter}{\listtablename}
-    \listoftables
-    \newpage
-  \end{spacing}
+% Konten tinjauan pustaka
+\input{konten/2-tinjauan-pustaka.tex}
 
-  % Nomor halaman isi dimulai dari sini
-  \pagenumbering{arabic}
+% Konten metodologi
+\input{konten/3-metodologi.tex}
 
-  % Konten pendahuluan
-  \input{konten/1-pendahuluan.tex}
-
-  % Konten tinjauan pustaka
-  \input{konten/2-tinjauan-pustaka.tex}
-
-  % Konten metodologi
-  \input{konten/3-metodologi.tex}
-
-  % Daftar pustaka
-  \chapter*{DAFTAR PUSTAKA}
-  \addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
-  \renewcommand\refname{}
-  \vspace{2ex}
-  \renewcommand{\bibname}{}
-  \begingroup
-    \def\chapter*#1{}
-    \printbibliography
-  \endgroup
+% Daftar pustaka
+\chapter*{DAFTAR PUSTAKA}
+\addcontentsline{toc}{chapter}{DAFTAR PUSTAKA}
+\renewcommand\refname{}
+\vspace{2ex}
+\renewcommand{\bibname}{}
+\begingroup
+\def\chapter*#1{}
+\printbibliography
+\endgroup
 
 
 \end{document}
