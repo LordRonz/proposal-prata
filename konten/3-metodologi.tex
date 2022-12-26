@@ -9,8 +9,8 @@ Sistem ini dibuat oleh laptop penulis yang menggunakan \emph{operating system} A
 dengan sistem operasi Ubuntu 20.04 dan \emph{Graphic Card} NVIDIA GeFoce GTX 1070 TI. Penulis melakukan remote desktop dengan menggunakan aplikasi
 NoMachine.
 
-\subsection{Metamask}
-Metamask adalah crypto wallet yang biasanya digunakan untuk keperluan development. Crypto wallet ini
+\subsection{\emph{Metamask}}
+\emph{Metamask} adalah \emph{crypto walle} yang biasanya digunakan untuk keperluan development. Crypto wallet ini
 akan sangat membantu dalam proses pengembangan. Terdapat banyak fitur-fitur seperti multi-account yang mempermudah proses pengembangan.
 
 \subsection{Remix IDE}
@@ -20,7 +20,7 @@ Remix IDE merupakan IDE yang memudahkan kita untuk proses development, deploymen
 Ethereum adalah \emph{blockchain opensource} dengan fitur smart contract. Fitur smart contract inilah yang akan digunakan untuk
 melakukan sharing data metadata audio.
 
-\subsection{Solidity}
+\subsection{\emph{Solidity}}
 Solidity adalah adalah bahasa tingkat tinggi berbasis objek untuk mengimplementasikan
 \emph{smart contract}. Solidity ini dijalankan didalam Ethereum Virtual Machine (EVM).
 Kontrak di Solidity mirip dengan class dalam bahasa object-oriented.  Secara umum, Solidity untuk Smart Contract dibuat dengan mengirimkan
@@ -53,8 +53,8 @@ diimplementasikan pada sistem dan keseluruhan flow sistem.
   \label{fig:Architecture}
 \end{figure}
 
-\emph{Smart contract} pada arsitektur berguna untuk melakukan operasi-operasi blockchain seperti
-memberikan NFT yang berisi metadata dari audio yang sudah disimpan di blockchain sebelumnya.
+\emph{Smart contract} pada arsitektur berguna untuk melakukan operasi-operasi \emph{blockchain} seperti
+memberikan NFT yang berisi metadata dari audio yang sudah disimpan di \emph{blockchain} sebelumnya.
 Untuk file dari audio itu sendiri direferensikan oleh metadata pada NFT tersebut dan akan diambil dari
 IPFS menggunakan web3.storage. Metaverse disini diimplementasikan menggunakan Unreal Engine 5 dan menggunakan API
 \emph{blockchain} untuk mengeksekusi smart contract. File audio akan diolah oleh metasound dan user akan menerima output audio tersebut.
@@ -71,7 +71,7 @@ Proses perancangan dari arsiktektur sistem yang meliputi IPFS, server, dan block
 \subsection{Proses \emph{generate} NFT dari audio}
 
 Untuk melakukan generate NFT diperlukan proses yang dinamakan Token minting.
-Crypto minting adalah sebuah proses komputasi untuk memvalidasi informasi, membuat blok baru dan merekam informasi tersebut ke dalam blockchain.
+Crypto minting adalah sebuah proses komputasi untuk memvalidasi informasi, membuat blok baru dan merekam informasi tersebut ke dalam \emph{blockchain}.
 Dalam proses crypto minting biasanya membutuhkan algoritma konsensus Proof-of-Stake.
 
 \begin{figure} [ht] \centering
@@ -88,7 +88,7 @@ Minting adalah proses yang cukup mudah dan terdesentralisasi. Kemudahan dalam pr
 Selain itu, ekosistem crypto juga menyediakan berbagai macam token yang diciptakan dengan proses minting, termasuk token aset kripto dan non-fungible token (NFT). Kedua jenis token tersebut tentunya dapat dibuat di berbagai ekosistem blockchain.
 
 \emph{Listing} diatas merupakan \emph{interface} dari metadata yang ditampung di NFT. Semua nilai dari data JSON tersebut
-memiliki tipe data yang adalah \emph{string}
+memiliki tipe data yang adalah \emph{string}.
 
 \section{Implementasi}
 
@@ -97,6 +97,15 @@ sebelumnya. Tahap ini dilakukan sampai selesai untuk masuk pada tahap validasi. 
 waktu yang ditentukan menyesuaikan dengan pembuatan fitur yang dikerjakan. Pembuatan
 implementasi diperkirakan kurang lebih 1 bulan. Implementasi ini termasuk baik pembuatan mini-metaverse
 menggunakan \emph{Unreal Engine 5} sebagai sarana untuk melakukan evaluasi dan testing agar keseluruhan sistem dapat terintegrasi.
+
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.60]{gambar/diagramimplementasi.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Diagram Implementasi}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:diagramimplementasi}
+\end{figure}
 
 \subsection{Pembuatan \emph{Smart Contract}}
 \emph{Smart Contract} diperlukan untuk membuat perjanjian dengan
@@ -107,7 +116,20 @@ Namun perlu dilakukan modifikasi untuk menyesuaikan dengan desain sistem yang di
 ini.
 
 \subsection{Proses \emph{minting} \emph{sound files} menjadi \emph{NFT}}
-\emph{Smart contract} yang telah dibuat, kemudian akan dilakukan verifikasi pada \emph{contract} tersebut.
+\emph{Smart contract} yang telah dibuat, kemudian akan dilakukan verifikasi pada \emph{contract} tersebut. Untuk proses \emph{minting} ini sendiri
+dapat dilakukan melalui Unreal Engine 5, atau bisa dilakukan secara terprogram, misalnya menggunakan kode \emph{javascript} ataupun \emph{solidity}.
+Di \emph{solidity} ini sendiri terdapat standard token \emph{ERC-721}, yang memiliki API untuk melakukan \emph{mint} token NFT. Pada proses \emph{minting}
+inilah kita dapat meletakkan metadata pada \emph{NFT}.
+
+\subsection{Pembuatan metaverse sederhana menggunakan Unreal Engine 5}
+Pembuatan metaverse ini ditujukan agar dapat menguji dan mengevaluasi apakah \emph{smart contract} yang dibuat pada langkah sebelumnya sudah benar.
+Fitur yang menjadi fokus utama adalah fitur sound dari \emph{plugin metasound}. Namun semakin banyak fitur yang dibuat maka semakin bagus hasilnya karena
+diusahakan dapat menjadi universal, tidak hanya musik namun juga bisa untuk \emph{sound effect} dan lain sebagainya.
+
+\subsection{Integrasi metaverse dengan sistem blockchain}
+\emph{ABI} yang didapatkan dari kompilasi \emph{smart contract} akan digunakan untuk melakukan integrasi dengan Unreal Engine 5.
+Setelah itu, akan dilakukan evaluasi dengan cara \emph{Trial and Error} dan melakukan testing untuk kecepatan transaksi, dikarenakan
+tiap blockchain dapat berbeda kecepatan transaksinya.
 
 \section{Jadwal Pelaksanaan}
 
