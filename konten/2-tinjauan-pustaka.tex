@@ -49,30 +49,44 @@ Data hash yang diterima oleh IPFS dienkripsi dengan SSS, jadi seorang customer y
 Penulis pada paper \parencite{hariadi2020} meneliti mengenai \emph{blockchain} untuk berbagi data rekomendasi tourisme.
 Salah satu hal yang dibutuhkan wisatawan untuk merencanakan kegiatan wisatanya adalah sistem rekomendasi.
 Sistem rekomendasi destinasi wisata pada penelitian ini memiliki tiga node utama yaitu user, server, dan sensor.
-Setiap node membutuhkan kemampuan untuk berbagi data untuk menghasilkan rekomendasi yang diharapkan pengguna melalui perangkat seluler mereka.
-Dalam makalah ini, diusulkan skema sistem berbagi data menggunakan jaringan desentralisasi berbasis blockchain yang setiap node dapat terhubung langsung satu sama lain, untuk mendukung pertukaran data di antara mereka. Arsitektur blok yang digunakan dalam jaringan blockchain memiliki tiga bagian utama, yaitu informasi blok, hash, dan data.
+Setiap node membutuhkan kemampuan untuk \emph{sharing data} untuk menghasilkan rekomendasi yang diharapkan pengguna melalui perangkat seluler mereka.
+Dalam makalah ini, diusulkan skema sistem \emph{data sharing} menggunakan jaringan desentralisasi berbasis blockchain yang setiap node dapat terhubung langsung satu sama lain, untuk mendukung pertukaran data di antara mereka. Arsitektur blok yang digunakan dalam jaringan blockchain memiliki tiga bagian utama, yaitu informasi blok, hash, dan data.
 
 \section{Teori/Konsep Dasar}
 
-\subsection{Jaringan Terdistribusi}
+\subsection{\emph{Blockchain}}
 
-Jaringan Terdistribusi adalah sebuah jaringan dimana setiap
-node dalam cluster tersebut saling terhubung satu sama lain.
-Jaringan desentralisasi mendistribusikan data, informasi, dan
-memproses beban kerja di seluruh komputer yang berpartisipasi dalam
-jaringan. Hal ini memungkinkan untuk toleransi kesalahan yang
-lebih besar sebagai komponen kunci dari jaringan di distribusikan
-di beberapa mesin, jika salah satu jaringan (hardware) down, maka
-jaringan secara keseluruhan terus berfungsi.
-Jaringan terdesentralisasi memiliki keuntungan lebih aman
-daripada jaringan terpusat, tidak ada satu server pusat yang
-ditargetkan oleh penyerang. Jika seseorang ingin menyerang jaringan, mereka
-perlu untuk menyerang beberapa node dalam jaringan. Karena
-tidak ada kekuasaan dalam jaringan, pengguna bisa lebih
-mempercayai sistem, namun juga karena tidak ada kekuasaan dalam jaringan,
-apabila ada masalah dalam jaringan tidak ada otoritas pusat yang
-membantu menyelesaikan masalah hal ini yang membedakan
-antara jaringan terpusat dan jaringan terdistribusi.
+\emph{Blockchain} adalah database terdistribusi yang digunakan
+untuk menangani record data yang terus bertambah, record data ini
+disebut dengan block. Setiap block memiliki penanda waktu dan
+kode unik yang terhubung dengan block sebelumnya, sehingga masing
+masing block tersebut saling terhubung satu sama lainnya dan
+tidak bisa untuk diubah.
+
+\begin{figure} [ht] \centering
+    % Nama dari file gambar yang diinputkan
+    \includegraphics[scale=0.4]{gambar/blockchainanatomy.png}
+    % Keterangan gambar yang diinputkan
+    \caption{Blockchain Anatomy}
+    % Label referensi dari gambar yang diinputkan
+    \label{fig:blockchainanatomy}
+\end{figure}
+
+Bagan diatas adalah visualisasi dari anatomi \emph{blockchain}. Perlu diketahui
+bahwa data dari \emph{blockchain} itu tidaklah di enkripsi, akan tetapi yang dienkripsi adalah
+\emph{previous hash} dan \emph{current hash}-nya, dengan algoritma enkripsi yang berbeda-beda pada setiap implementasinya.
+\emph{Blockchain} biasanya dikelola oleh jaringan
+peer-to-peer yang secara kolektif mengikuti protokol untuk
+memvalidasi block baru. Jika terdapat perintah penambahan block baru,
+maka setiap node pada jaringan peer-to-peer tersebut akan terlebih
+dahulu memvalidasi block dan kemudian seluruh node akan memperbarui record data miliknya [18]. \emph{Blockchain} memiliki 3 type \parencite{url:blockchaintype}
+yaitu \emph{Public Blockchain} yang dikembangkan secara bersama-sama
+oleh publik dan siapa saja dapat ikut serta untuk mengembangkan
+blockchain, \emph{Private Blockchain} yang hanya bisa digunakan oleh
+organisasi tertentu, \emph{consortium blockchain} yang dikembangkan oleh
+suatu kelompok secara bersama untuk kepentingan tertentu,
+sederhananya \emph{blockchain konsorsium} merupakan \emph{blockchain privat} yang
+diberdayakan oleh lebih dari satu kelompok.
 
 \subsection{\emph{Metaverse}}
 
@@ -93,27 +107,6 @@ Use case untuk NFT adalah kepemilikan asset digital dan transaksinya hingga peng
 \emph{Solidity} adalah adalah bahasa tingkat tinggi berbasis objek untuk mengimplementasikan
 \emph{smart contract}. Solidity ini dijalankan didalam \emph{Ethereum Virtual Machine (EVM)}.
 
-
-\subsection{\emph{Blockchain}}
-
-\emph{Blockchain} adalah database terdistribusi yang digunakan
-untuk menangani record data yang terus bertambah, record data ini
-disebut dengan block. Setiap block memiliki penanda waktu dan
-kode unik yang terhubung dengan block sebelumnya, sehingga masing
-masing block tersebut saling terhubung satu sama lainnya dan
-tidak bisa untuk diubah. \emph{Blockchain} biasanya dikelola oleh jaringan
-peer-to-peer yang secara kolektif mengikuti protokol untuk
-memvalidasi block baru. Jika terdapat perintah penambahan block baru,
-maka setiap node pada jaringan peer-to-peer tersebut akan terlebih
-dahulu memvalidasi block dan kemudian seluruh node akan memperbarui record data miliknya [18]. \emph{Blockchain} memiliki 3 type \parencite{url:blockchaintype}
-yaitu \emph{Public Blockchain} yang dikembangkan secara bersama-sama
-oleh publik dan siapa saja dapat ikut serta untuk mengembangkan
-blockchain, \emph{Private Blockchain} yang hanya bisa digunakan oleh
-organisasi tertentu, \emph{consortium blockchain} yang dikembangkan oleh
-suatu kelompok secara bersama untuk kepentingan tertentu,
-sederhananya \emph{blockchain konsorsium} merupakan \emph{blockchain privat} yang
-diberdayakan oleh lebih dari satu kelompok.
-
 \subsection{\emph{MetaSounds}}
 MetaSounds merupakan plugin dari \emph{Unreal Engine 5} yang berfungsi sebagai sistem audio
 berperforma tinggi yang menawarkan \emph{audio designers} dengan kendali penuh.
@@ -122,10 +115,7 @@ berperforma tinggi yang menawarkan \emph{audio designers} dengan kendali penuh.
 
 Unreal Engine (UE) adalah Game Engine grafis komputer 3D yang dikembangkan oleh Epic Games, pertama kali dipamerkan dalam game penembak orang pertama tahun 1998 Unreal.
 Awalnya dikembangkan untuk penembak orang pertama PC, sejak itu telah digunakan dalam berbagai genre permainan dan telah diadopsi oleh industri lain, terutama industri film dan televisi. Ditulis dalam C++,
-Unreal Engine memiliki fitur portabilitas tingkat tinggi, mendukung berbagai platform desktop, seluler, konsol, dan virtual reality (VR).
-Generasi terbaru, Unreal Engine 5, diluncurkan pada April 2022. Seperti pendahulunya yang dirilis pada Maret 2014, kode sumbernya tersedia di GitHub setelah mendaftarkan akun, dan penggunaan komersial diberikan
-berdasarkan model royalti. Epic membebaskan margin royalti mereka untuk game sampai pengembang memperoleh pendapatan US\$1 juta dan biaya tersebut dibebaskan jika pengembang menerbitkan di Epic Games Store. Epic telah memasukkan fitur dari perusahaan yang diakuisisi seperti Quixel di mesin, yang dipandang terbantu oleh pendapatan Fortnite.
-Unreal Engine 5 terungkap pada 13 Mei 2020, mendukung semua sistem yang ada termasuk konsol generasi berikutnya PlayStation 5 dan Xbox Series X/S.\parencite{StattEpicAnnounce} Pengerjaan mesin dimulai sekitar dua
+Unreal Engine 5 dipublikasi pada tanggal 13 Mei 2020, mendukung semua sistem yang ada termasuk konsol generasi berikutnya PlayStation 5 dan Xbox Series X/S.\parencite{StattEpicAnnounce} Pengerjaan mesin dimulai sekitar dua
 tahun sebelum diumumkan.\parencite{DeanTakahashi} UE5 dirilis dalam early access pada 26 Mei 2021,\parencite{EddieMakuch} dan secara resmi diluncurkan untuk pengembang pada 5 April 2022.\parencite{UE5Launch}
 
 Salah satu fitur utamanya adalah Nanite, mesin yang memungkinkan bahan sumber fotografi dengan detail tinggi diimpor ke dalam game.\parencite{ValentineRebekah} Teknologi geometri tervirtualisasi Nanite memungkinkan Epic memanfaatkan akuisisi Quixel sebelumnya, perpustakaan fotogrametri terbesar di dunia pada 2019. Tujuan Unreal Engine 5 adalah untuk memudahkan pengembang

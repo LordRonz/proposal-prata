@@ -2,3 +2,11 @@ marp -> generate ppt with markdown
 mermaid -> js diagramming tool
 
 web3storage IPFS
+
+mending pakai "data sharing"
+bersinergi dengan web3.0, dan diharapkan terjadinya interoperability
+
+
+smart contract tidak cuma dipakai ethereum
+
+blockchain datanya ga dienkripsi tapi hashnya yang dienkripsi (previous hash, current hash)
