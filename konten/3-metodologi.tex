@@ -94,12 +94,30 @@ Selain itu, ekosistem crypto juga menyediakan berbagai macam token yang diciptak
 \emph{Listing} diatas merupakan \emph{interface} dari metadata yang ditampung di NFT. Semua nilai dari data JSON tersebut
 memiliki tipe data yang adalah \emph{string}.
 
+\subsection{\emph{Flow} sistem}
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/userinteractionmetaverse.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Flow interaksi user dengan metaverse}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:userinteractionmetaverse}
+\end{figure}
+\begin{figure} [ht] \centering
+  % Nama dari file gambar yang diinputkan
+  \includegraphics[scale=0.55]{gambar/userinteractionupload.png}
+  % Keterangan gambar yang diinputkan
+  \caption{Proses yang terjadi saat upload file untuk minting}
+  % Label referensi dari gambar yang diinputkan
+  \label{fig:userinteractionupload}
+\end{figure}
+
 \section{Implementasi}
 
 Pembuatan implementasi dari fitur dari aplikasi yang sudah ditentukan melalui tahap
 sebelumnya. Tahap ini dilakukan sampai selesai untuk masuk pada tahap validasi. Alokasi
 waktu yang ditentukan menyesuaikan dengan pembuatan fitur yang dikerjakan. Pembuatan
-implementasi diperkirakan kurang lebih 1 bulan. Implementasi ini termasuk baik pembuatan mini-metaverse
+implementasi diperkirakan kurang lebih dua bulan. Implementasi ini termasuk baik pembuatan mini-metaverse
 menggunakan \emph{Unreal Engine 5} sebagai sarana untuk melakukan evaluasi dan testing agar keseluruhan sistem dapat terintegrasi.
 
 \begin{figure} [ht] \centering
@@ -119,11 +137,11 @@ smart contract dalam bentuk kode. Pembuatan smart contract dapat mengacu pada do
 Namun perlu dilakukan modifikasi untuk menyesuaikan dengan desain sistem yang digunakan pada penelitian
 ini.
 
-\subsection{Proses \emph{minting} \emph{sound files} menjadi \emph{NFT}}
-\emph{Smart contract} yang telah dibuat, kemudian akan dilakukan verifikasi pada \emph{contract} tersebut. Untuk proses \emph{minting} ini sendiri
-dapat dilakukan melalui Unreal Engine 5, atau bisa dilakukan secara terprogram, misalnya menggunakan kode \emph{javascript} ataupun \emph{solidity}.
-Di \emph{solidity} ini sendiri terdapat standard token \emph{ERC-721}, yang memiliki API untuk melakukan \emph{mint} token NFT. Pada proses \emph{minting}
-inilah kita dapat meletakkan metadata pada \emph{NFT}.
+\subsection{Proses pembuatan antarmuka untuk mengunggah file audio}
+Setelah \emph{Smart Contract} dibuat, maka akan dibuat tambahan antarmuka untuk dapat mengunggah file, dan membuat NFT dari file tersebut.
+File yang dibuat akan disimpan di IPFS. NFT yang di\emph{generate} akan menyimpan hash IPFS atau CID yang apabila diakses maka akan ditemukan
+file text dengan format \emph{JSON}. File JSON ini akan menyimpan kumpulan \emph{key value}. Salah satu dari \emph{value} ini adalah hash dari source file sound
+yang disimpan di IPFS.
 
 \subsection{Pembuatan metaverse sederhana menggunakan Unreal Engine 5}
 Pembuatan metaverse ini ditujukan agar dapat menguji dan mengevaluasi apakah \emph{smart contract} yang dibuat pada langkah sebelumnya sudah benar.
@@ -152,24 +170,16 @@ tiap blockchain dapat berbeda kecepatan transaksinya.
     \hline
 
     % Gunakan \G untuk mengisi sel dan \w untuk mengosongkan sel
-    Requirement Analysis      &
-    \G                        & \G                            & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
-    \hline
-
     Desain Sistem             &
-    \w                        & \w                            & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
+    \G                        & \G                            & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w & \w \\
     \hline
 
     Implementasi              &
-    \w                        & \w                            & \w & \G & \G & \G & \G & \G & \w & \w & \w & \w & \w & \w & \w & \w \\
+    \w                        & \w                            & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G & \w & \w & \w & \w \\
     \hline
 
-    Integration Testing       &
-    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w & \w & \w \\
-    \hline
-
-    Unit Testing              &
-    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \w & \w & \w & \w \\
+    Testing                   &
+    \w                        & \w                            & \w & \w & \w & \w & \w & \w & \w & \w & \G & \G & \G & \w & \w & \w \\
     \hline
 
     Evaluasi penelitian       &
@@ -177,7 +187,7 @@ tiap blockchain dapat berbeda kecepatan transaksinya.
     \hline
 
     Penyusunan buku           &
-    \w                        & \w                            & \w & \w & \w & \w & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G \\
+    \w                        & \w                            & \w & \w & \w & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G & \G \\
     \hline
   \end{tabular}
 \end{table}
