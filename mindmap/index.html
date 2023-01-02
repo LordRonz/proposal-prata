@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <pre class="mermaid">
+mindmap
+  root(SISTEM DATA SHARING BERBASIS BLOCKCHAIN UNTUK AUDIO PLAYER DI METAVERSE)
+    Pendahuluan
+      Latar Belakang
+        1. Pesatnya kemajuan teknologi<br />2. Kurangnya sistem terdesentralisasi dalam platform audio<br />3. Belum adanya sistem terdesentralisasi untuk sharing data pada metaverse
+      Tujuan
+        Membuat sistem sharing data terdesentralisasi untuk metaverse
+      Rumusan masalah
+        Dibutuhkan sistem sharing data terdesentralisasi untuk metaverse 
+    Tinjauan Pustaka
+      Penelitian Terkait
+        A Secure Data Sharing Platform Using Blockchain and Interplanetary File System
+          Pada paper ini, sebuah framework data sharing yang aman berbasis blockchain dipersembahkan.
+        Blockchain Based Data Sharing for Decentralized Tourism Destinations Recommendation System
+          Penulis pada paper meneliti mengenai blockchain untuk berbagi data rekomendasi tourisme.
+        Securing music sharing platforms: A Blockchain Based Approach
+          Penulis pada paper mengajukan sebuah platform berbagi musik yang berbasis pada blockchain dan arsitektur IPFS. 
+      Teori dasar
+        Blockchain
+          Blockchain adalah database terdistribusi yang digunakan untuk menangani record data yang terus bertambah.
+        NFT
+          NFT merupakan antarmuka standar untuk membuat Non Fungible Token, atau NFT. Use case untuk NFT adalah kepemilikan asset digital dan transaksinya hingga pengiriman ke crypto wallet pihak ketiga.
+        Solidity
+          Solidity adalah adalah bahasa tingkat tinggi berbasis objek untuk mengimplementasikan smart contract. Solidity ini dijalankan didalam Ethereum Virtual Machine.
+        Unreal Engine 5
+          Unreal Engine adalah Game Engine grafis komputer 3D yang dikembangkan oleh Epic Games.
+        IPFS
+          IPFS/InterPlanetary File System adalah sebuah protocol dan peer to peer jaringan untuk berbagi data dalam distributed file system
+    Metodologi
+      Tools yang akan digunakan
+        Metamask, Remix IDE, Ethereum, Solidity, Ganache, IPFS, web3.storage
+      Desain arsitektur
+        Arsitektur sistem
+          Smart contract pada arsitektur berguna untuk melakukan operasi operasi blockchain seperti memberikan NFT yang berisi metadata dari audio yang sudah disimpan di blockchain sebelumnya. Untuk file dari audio itu sendiri direferensikan oleh metadata pada NFT tersebut dan akan diambil dari IPFS menggunakan web3.storage.
+        Proses generate NFT dari audio
+          Untuk melakukan generate NFT diperlukan proses yang dinamakan Token minting. Crypto minting adalah sebuah proses komputasi untuk memvalidasi informasi, membuat blok baru dan merekam informasi tersebut ke dalam blockchain. Dalam proses crypto minting biasanya membutuhkan algoritma konsensus Proof of Stake.
+      Implementasi
+        Pembuatan Smart contract
+          Smart Contract diperlukan untuk membuat perjanjian dengan berbagai kondisi agar pada blokchain bisa mengatur sendiri tanpa adanya pihak ketika, disini dibuat beberapa kondisi pada smart contract dalam bentuk kode.
+        Proses pembuatan antarmuka untuk mengunggah file audio
+          Setelah Smart Contract dibuat, maka akan dibuat tambahan antarmuka untuk dapat mengunggah file, dan membuat NFT dari file tersebut.
+        Pembuatan metaverse sederhana menggunakan Unreal Engine 5
+          Pembuatan metaverse ini ditujukan agar dapat menguji dan mengevaluasi apakah smart contract yang dibuat pada langkah sebelumnya sudah benar.
+        Integrasi metaverse dengan sistem blockchain
+          ABI yang didapatkan dari kompilasi smart contract akan digunakan untuk melakukan integrasi dengan Unreal Engine 5. 
+        </pre>
+        <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+            import mindmap from 'https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-mindmap@9/dist/mermaid-mindmap.esm.min.mjs';
+            await mermaid.registerExternalDiagrams([mindmap]);
+        </script>
+    </body>
+</html>
